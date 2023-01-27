@@ -1,0 +1,49 @@
+<html>
+      <head>
+
+         <title>canvas in html-5</title>
+         <script>
+  		    function Draw(){
+
+                 var canvas=document.getElementById("mycanvas");
+   	     var ctx=canvas.getContext("2d");
+   	   var grd=ctx.createLinearGradient(0,0,200,0);
+
+	   grd.addColorStop(0,"red");
+	 grd.addColorStop(0.5,"blue");   
+	ctx.fillStyle=grd;
+	ctx.fillRect(10,10,150,120);    
+	ctx.stroke();        
+                        ctx.beginPath(); 
+		   
+ 		ctx.rect(150,150,220,220);
+	            ctx.lineWidth="8";
+                        ctx.fill();
+                        ctx.closePath();
+ 
+                         ctx.beginPath();
+                           ctx.fillStyle="darkblue";
+                        ctx.arc(260,260,100,0,(360*3.14)/180);
+                          ctx.strokeStyle="darkblue";
+                        ctx.lineWidth="7";
+                       ctx.font="bold 4em arial ";
+ 		ctx.fillText("D",180,280);
+		ctx.fillText("L",260,280);
+		ctx.fillText("L",300,280);
+
+                     ctx.rotate(-40*Math.PI/160);
+                     ctx.fillText("E",-30,380);
+                       ctx.stroke();
+            
+	
+              }
+
+         </script>
+    </head>
+
+     <body onload=" Draw();">
+ 	    <center>
+		<canvas id="mycanvas" height="500" width="500" style="border:3px solid red"></canvas>
+          </center>
+     </body>
+</html>
