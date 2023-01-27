@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>flage</title>
+		<script>
+		         function draw(){
+			var c=document.getElementById("mycanvas");
+		     var ctx = c.getContext("2d");
+		  var grd=ctx.createLinearGradient(10,10,10,500);
+
+	                    grd.addColorStop(1,"green");
+	                    grd.addColorStop(0.5,"cyan");
+		 	ctx.fillStyle=grd;
+	ctx.fillRect(10,10,700,600);    
+	ctx.stroke();        
+			 ctx.beginPath();
+			ctx.lineWidth="3";
+                                    ctx.fillStyle="orange";
+			 ctx.fillRect(200,50,220,40);
+			
+			ctx.stroke();          
+			 ctx.closePath();
+
+			 ctx.beginPath();
+			ctx.lineWidth="3";
+			ctx.fillStyle="white";
+			 ctx.fillRect(200,90,220,40);
+			ctx.stroke();          
+			 ctx.closePath();
+			
+			 ctx.beginPath();
+			ctx.lineWidth="3";
+			ctx.fillStyle="green";
+			 ctx.fillRect(200,130,220,40);
+			ctx.stroke();          
+			 ctx.closePath();
+			  	    
+			
+
+			ctx.beginPath();
+			ctx.lineWidth="3";
+		      	ctx.arc(310,110,18,0,(360*Math.PI)/180);
+			  ctx.stroke();	
+			 ctx.beginPath();	
+			ctx.arc(310,110,3,0,(360*Math.PI)/180);
+			  ctx.stroke();
+		             ctx.closePath();
+	
+		             ctx.beginPath();
+			ctx.strokeStyle="darkblue";
+			ctx.moveTo(290,110);
+			ctx.lineTo(328,110); 
+			ctx.moveTo(317,93);
+			ctx.lineTo(303,127);
+			
+			   ctx.moveTo(298,97);
+			ctx.lineTo(322,123); 
+
+			ctx.moveTo(292,118);
+			ctx.lineTo(325,103);
+
+			 ctx.moveTo(310,90);
+			ctx.lineTo(310,128);
+			 ctx.moveTo(324,96);
+			ctx.lineTo(296,124);
+			ctx.moveTo(303,92);
+			ctx.lineTo(317,128);
+			ctx.moveTo(295,103);
+			ctx.lineTo(328,118);
+			  ctx.stroke(); 
+			ctx.closePath();
+			
+			 ctx.beginPath();			
+			ctx.arc(200,35,7,0,(360*Math.PI)/180);
+			ctx.arc(200,25,5,0,(360*Math.PI)/180);
+			ctx.fill();
+			ctx.closePath();		
+	
+
+			
+
+			ctx.beginPath();	
+			ctx.strokeStyle="black";		
+			 ctx.rect(150,400,100,30);
+			 ctx.rect(125,430,150,30);
+			 ctx.rect(100,460,200,30);
+	                            ctx.stroke();          
+			 ctx.closePath();
+			
+			ctx.beginPath();
+			ctx.fillStyle="maroon";
+			ctx.lineWidth="7";
+                                     ctx.moveTo(200,40);
+			ctx.lineTo(200,400);
+			ctx.stroke();  
+			
+			ctx.beginPath();
+			ctx.font="bold 4em arial";
+			ctx.fillStyle="darkred";
+ctx.shadowColor="black";
+			ctx.shadowBlur="10";
+			ctx.shadowOffsetX="5";
+			ctx.shadowOffsetY="5";	
+			ctx.fillText("JAY",270,300);
+			ctx.fillText("HIND",400,300);
+			ctx.strokeRect(1,1,700,600);
+			ctx.stroke();  
+			
+			}
+		</script>
+           </head>
+
+	<body onload="draw();" >
+    	<center>
+	    	<canvas id="mycanvas" height="600" width="700" style="border:2px solid"></canvas>
+		</center>
+          </body>
+</html>
